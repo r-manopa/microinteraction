@@ -2,7 +2,7 @@ import { useState, useLayoutEffect } from 'react'
 import { Outlet, useNavigate, useLocation } from 'react-router-dom'
 import { Pagination, NextButton, PrevButton, PageButton } from 'react-headless-pagination'
 import { getParam } from '../utils/url'
-import { media } from '../media'
+import { defaultMedia } from '../media'
 
 export function Layout() {
 
@@ -29,7 +29,7 @@ export function Layout() {
             <Outlet />
             <Pagination
                 currentPage={page}
-                totalPages={media.length}
+                totalPages={defaultMedia.length}
                 edgePageCount={2}
                 middlePagesSiblingCount={0}
                 setCurrentPage={setCurrentPage}
